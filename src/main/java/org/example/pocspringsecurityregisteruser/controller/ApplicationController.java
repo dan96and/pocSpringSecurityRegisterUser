@@ -13,7 +13,7 @@ public class ApplicationController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public String showRegisterPage(){
+    public String showRegisterPage() {
         return "register";
     }
 }

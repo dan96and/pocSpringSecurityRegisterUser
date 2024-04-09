@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,7 +10,7 @@
 <body>
 <h1>Bienvenido al Login</h1>
 <div style="width: 200px">
-    <form class="form" style="display: flex; flex-direction: column;">
+    <form th:action="@{/create-user}" th:object="${user}" name="user" method="post" class="form" style="display: flex; flex-direction: column;">
         <label style="padding-bottom: 10px;">Email</label>
         <input style="margin-bottom: 10px;" type="text"/>
         <label style="padding-bottom: 10px;">Password</label>
