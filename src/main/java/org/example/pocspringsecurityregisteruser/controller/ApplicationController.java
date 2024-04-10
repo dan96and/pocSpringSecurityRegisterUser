@@ -16,4 +16,9 @@ public class ApplicationController {
     public String showRegisterPage() {
         return "register";
     }
+
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String showHomePage() {
+        return "home";
+    }
 }
