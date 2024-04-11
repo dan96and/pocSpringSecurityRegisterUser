@@ -17,10 +17,13 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         http.authorizeHttpRequests(auth -> auth
-                .requestMatchers("/login", "register", "create-user").permitAll());
+                .requestMatchers("/login", "/register", "/create-user").permitAll()
+                .anyRequest().authenticated()
+                );
 
         http.formLogin(login -> login
-                .loginPage("/login"));
+                .loginPage("/login").permitAll()
+                );
 
         http.csrf(AbstractHttpConfigurer::disable);
 

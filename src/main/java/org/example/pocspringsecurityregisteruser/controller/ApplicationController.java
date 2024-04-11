@@ -1,6 +1,8 @@
 package org.example.pocspringsecurityregisteruser.controller;
 
+import org.example.pocspringsecurityregisteruser.domain.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -13,7 +15,8 @@ public class ApplicationController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public String showRegisterPage() {
+    public String showRegisterPage(Model model) {
+        model.addAttribute("user",new User());
         return "register";
     }
 
