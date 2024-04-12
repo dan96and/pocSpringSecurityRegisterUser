@@ -18,12 +18,11 @@ public class SecurityConfig {
 
         http.authorizeHttpRequests(auth -> auth
                 .requestMatchers("/login", "/register", "/create-user").permitAll()
-                .anyRequest().authenticated()
-                );
+                .anyRequest().authenticated());
 
         http.formLogin(login -> login
                 .loginPage("/login").permitAll()
-                );
+                .defaultSuccessUrl("/home"));
 
         http.csrf(AbstractHttpConfigurer::disable);
 
