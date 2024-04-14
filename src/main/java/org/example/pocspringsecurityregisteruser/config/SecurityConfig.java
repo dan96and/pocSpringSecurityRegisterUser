@@ -21,6 +21,7 @@ public class SecurityConfig {
                 .anyRequest().authenticated());
 
         http.formLogin(login -> login
+        //Login
                 .loginPage("/login").permitAll()
                 .defaultSuccessUrl("/home"));
 
