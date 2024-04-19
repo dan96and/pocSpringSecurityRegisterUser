@@ -17,13 +17,15 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         http.authorizeHttpRequests(auth -> auth
-                .requestMatchers("/login", "/register", "/create-user").permitAll()
+                .requestMatchers("/login", "/register", "/create-user", "/index2").permitAll()
                 .anyRequest().authenticated());
 
         http.formLogin(login -> login
-                .loginPage("/login").permitAll()
+                .loginPage("/index2").permitAll()
                 .defaultSuccessUrl("/home"));
 
+        http.logout(logout -> logout.permitAll());
+        
         http.csrf(AbstractHttpConfigurer::disable);
 
         return http.build();

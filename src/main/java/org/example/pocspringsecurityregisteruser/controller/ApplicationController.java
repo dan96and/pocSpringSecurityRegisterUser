@@ -16,8 +16,13 @@ public class ApplicationController {
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String showRegisterPage(Model model) {
-        model.addAttribute("user",new User());
+        model.addAttribute("user", new User());
         return "register";
+    }
+
+    @RequestMapping(value = "/index2", method = RequestMethod.GET)
+    public String requestMethodName() {
+        return "index2";
     }
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
