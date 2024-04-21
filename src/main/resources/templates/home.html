@@ -10,8 +10,11 @@
 <body>
     <h1>ESTOY EN LA HOME!</h1>
     <form method="post" th:action="@{/logout}">
-        <button type="submit" >Log out</button>
+        <button type="submit">Log out</button>
     </form>
+    <div sec:authorize="isAuthenticated()">
+        <p>Estoy authenticado y puedo ver este mensaje</p>
+    </div>
 </body>
 
 </html>

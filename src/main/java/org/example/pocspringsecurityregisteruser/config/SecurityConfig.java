@@ -12,19 +12,19 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-
+//TODO: Implementar la autentificación 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         http.authorizeHttpRequests(auth -> auth
-                .requestMatchers("/login", "/register", "/create-user", "/index2", "/home").permitAll()
+                .requestMatchers("/login", "/register", "/create-user", "/index2").permitAll()
                 .anyRequest().authenticated());
 
         http.formLogin(login -> login
                 .loginPage("/index2").permitAll()
                 .defaultSuccessUrl("/home"));
 
-        // http.logout(logout -> logout.permitAll());
+        http.logout(logout -> logout.permitAll());
         
         http.csrf(AbstractHttpConfigurer::disable);
 
