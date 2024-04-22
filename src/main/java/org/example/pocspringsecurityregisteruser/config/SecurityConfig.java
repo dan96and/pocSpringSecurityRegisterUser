@@ -12,7 +12,8 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-//TODO: Implementar la autentificación 
+    //TODO: Implementar la autentificación
+    //TODO: TODO
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
