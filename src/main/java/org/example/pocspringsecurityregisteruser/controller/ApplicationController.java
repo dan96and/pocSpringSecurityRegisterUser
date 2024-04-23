@@ -20,9 +20,9 @@ public class ApplicationController {
         return "register";
     }
 
-    @RequestMapping(value = "/index2", method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String requestMethodName() {
-        return "index2";
+        return "index";
     }
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)

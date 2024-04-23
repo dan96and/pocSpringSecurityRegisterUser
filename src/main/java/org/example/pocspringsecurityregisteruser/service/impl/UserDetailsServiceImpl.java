@@ -23,7 +23,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         if (user == null) {
             System.out.println("Usuario o contraseña incorrectos");
+            System.out.println("EEEEEEEEEH");
         } else {
+            System.out.println("EEEEEEEEEH");
             System.out.println("El usuario es correcto");
             System.out.println("PASSWORD USER: "+user.getPassword());
         }

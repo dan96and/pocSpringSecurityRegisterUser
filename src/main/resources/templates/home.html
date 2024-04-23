@@ -9,7 +9,7 @@
 
 <body>
     <h1>ESTOY EN LA HOME!</h1>
-    <form method="post" th:action="@{/logout}">
+    <form th:action="@{/logout}">
         <button type="submit">Log out</button>
     </form>
     <div sec:authorize="isAuthenticated()">
