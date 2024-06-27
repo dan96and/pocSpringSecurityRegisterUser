@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "USER")
 public class User {
-
+//Update
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
